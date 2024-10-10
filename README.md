@@ -3,10 +3,10 @@
 **Mealvora** is a web-based food delivery application where users can browse meals, add them to their cart, and place orders. The app features user authentication and order tracking, with a sleek interface powered by React and Node.js.
 
 ## 📋 Features
-- **User Authentication**: Sign up, Login
-- **Browse Meal Items**: View details
-- **Add Items**: To the cart
-- **Place Orders**: Track previous orders
+- User authentication (Sign up, Login)
+- Browse meal items and view details
+- Add items to the cart
+- Place orders and track previous orders
 
 ## 🛠️ Technologies Used
 - **Frontend**: React, Bootstrap
