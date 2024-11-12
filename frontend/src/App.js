@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import { CartProvider } from './components/ContextReducer.js';
 import MyOrder from './screens/MyOrder.js';
+import Checkout from './components/PaymentCheckout.js';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/creatuser" element={<Signup />} />
             <Route exact path="/myOrder" element={<MyOrder />} />
+            <Route exact path="/checkout" element={<Checkout />}/>
           </Routes>
         </div>
       </Router>
@@ -33,4 +35,35 @@ function App() {
 }
 
 export default App;
+// import React, { useRef, useState } from 'react'
+
+// export default function App() {
+
+//   const inputRef = useRef(null);
+
+//   function handleClick() {
+//     console.log(inputRef);
+//     inputRef.current.value="Saurabh"
+
+//   }
+
+
+//   return (
+//     <>
+//       <h1 >App</h1>
+//       <input ref={inputRef} type='text' value={"Saurabh Kumar"}/>
+//       <button onClick={handleClick}>Click Me</button>
+
+//     </>
+
+//   )
+// }
+// import React from 'react'
+// import FormValidation from './components/FormValidation'
+
+// export default function App() {
+//   return (
+//     <FormValidation/>
+//   )
+// }
 

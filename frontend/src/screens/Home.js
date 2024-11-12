@@ -11,6 +11,7 @@ export default function Home() {
   const [foodItem, setFoodItem] = useState([]);
 
   const loadData = async () => {
+    
     let response = await fetch("http://localhost:5000/api/foodData", {
       method: "POST",
       headers: {
@@ -29,6 +30,7 @@ export default function Home() {
 
   return (
     <div>
+      
       <div> <Navbar /> </div>
       <div> <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
         <div className="carousel-indicators">

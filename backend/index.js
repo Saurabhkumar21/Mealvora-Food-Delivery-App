@@ -3,9 +3,15 @@ import { mongoDB } from "./db.js"; // MongoDB connection
 import CreateUserRouter from './Routes/CreateUser.js'; // Correct path to the router
 import DisplayDataRouter from './Routes/DisplayData.js';
 import orderData from './Routes/OrderData.js';
-
-
 import cors from "cors";
+import Razorpay from 'razorpay';
+import OrderPayment from './Routes/OrderPayment.js'
+
+const razorpay = new Razorpay({
+  key_id: '' ,  // Replace with Razorpay Key ID
+  key_secret: ''  // Replace with Razorpay Key Secret
+});
+
 
 const port = 5000;
 const app = express();
@@ -29,6 +35,8 @@ app.use('/api', CreateUserRouter);
 app.use('/api', DisplayDataRouter);
 
 app.use('/api', orderData);
+
+app.use('/api', OrderPayment);
 
 // Basic route
 app.get("/", (req, res) => {
